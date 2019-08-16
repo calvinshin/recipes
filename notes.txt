@@ -2,4 +2,23 @@ Notes about what I want to make:
 
 Use a mongo database to create recipes (as each recipe will have uncertain parameters with different amounts)
 - Could be a SQL database that stores arrays, but will try to use mongoose as a way to practice this
-- 
+- Question is it easier to store ingredients as a separate object and connect them as relations, or is it easier to keep them separate.
+-- Questions to ask others to understand if it's worthwhile to connect or not.
+- Creating a separate object would make it easier to store information about the ingredient (for nutritional purposes, for example)
+
+
+Recipe Keys:
+- Steps
+- ingredients
+- Source
+- Pictures, if any
+- Notes as a separate field (that could store multiple notes)
+- Tags for the recipe
+-- Type of cuisine
+-- Meal/Dessert/etc.
+
+Other items that need to be built
+- A way to store changes to steps/recipe itself
+- A way to upload information on front end and store in the backend
+- A way to backup the data...?
+- A way to login to make changes/edits that are stored in Heroku as variables
