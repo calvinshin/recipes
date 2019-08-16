@@ -1,0 +1,5 @@
+Notes about what I want to make:
+
+Use a mongo database to create recipes (as each recipe will have uncertain parameters with different amounts)
+- Could be a SQL database that stores arrays, but will try to use mongoose as a way to practice this
+- 
