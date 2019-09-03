@@ -1,32 +1,17 @@
 import React, { Component } from "react";
+import Recipe from "../../components/Recipe"
+
+// Alternative would be to create a component that is like a click to add, which would work for tags, ingredients, and steps.
 
 class Home extends Component {
+    state = {
+        recipe: {},
+        test: "test text"
+    }
     render() {
         return(
-            <form>
-                Title
-                <br />
-                <input type="text" name="title" />
-
-                <p />
-
-                Ingredients
-                <br />
-                <input type="textarea" name="ingredients" />
-
-                <p />
-
-                Steps
-                <br />
-                <input type="textarea" name="steps" />
-
-                <p />
-
-                Source
-                <br />
-                <input type="text" name="source" />
-
-            </form>
+            // The value of this.state.test doesn't need to exist due to the ternary expression
+            <Recipe test={this.state.test}/>
         )
     }
 }
