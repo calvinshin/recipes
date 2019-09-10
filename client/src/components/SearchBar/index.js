@@ -1,26 +1,20 @@
 import React from "react"
 
-function Recipe({recipe}) {
+function SearchBar({search}) {
     return(
         <form id="search">
         <select>
-            <option value="allrecipes">All Recipes</option>
+            <option value="allrecipes">AllRecipes.com</option>
             <option value="">Other</option>
-            <option value="">Opel</option>
-            <option value="">Audi</option>
         </select>
         
         <p />
     
         Link
         <br />
-        <input type="text" name="source" value={recipe.source}/>
-        
-    <p></p>
-    <Button />
-
+        <input type="text" name="source" value={search}/>
     </form>
     )
 }
 
-export default Recipe;
+export default SearchBar;
