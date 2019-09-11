@@ -1,6 +1,6 @@
 import React from "react"
 
-function SearchBar({search}) {
+function SearchBar({search, handleFormSubmit}) {
     return(
         <form id="search">
         <select>
@@ -13,6 +13,9 @@ function SearchBar({search}) {
         Link
         <br />
         <input type="text" name="source" value={search}/>
+
+        <br />
+        <button onClick={handleFormSubmit} > Search </button>
     </form>
     )
 }

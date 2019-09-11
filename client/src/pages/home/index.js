@@ -10,13 +10,27 @@ class Home extends Component {
         test: "test text",
         search: "https://www.allrecipes.com/recipe/24272/buttery-soft-pretzels/"
     }
+
+    recipeUpdate = newRecipe => {
+        this.setState({recipe: newRecipe});
+    }
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.recipeUpdate();
+    };
+
     render() {
         return(
             // The value of this.state.test doesn't need to exist due to the ternary expression
-            // <div>
-                // <Recipe recipe={this.state.recipe}/>
-                <SearchBar search={this.state.search}/>
-            // </div>
+            <div>
+                <SearchBar
+                    search={this.state.search}
+                    handleFormSubmit={this.handleFormSubmit}
+                />
+                <p />
+                <Recipe recipe={this.state.recipe}/>
+            </div>
         )
     }
 }
